@@ -12,4 +12,5 @@ jobs:
         env:
           APP_URL: ${{ secrets.APP_URL }}
           CRON_SECRET: ${{ secrets.CRON_SECRET }}
-        run: curl -fsS -H "Authorization: Bearer $CRON_SECRET" "$APP_URL/api/cron/recordatorios"
+        run: |
+          curl -fsS -H "Authorization: Bearer $CRON_SECRET" "$APP_URL/api/cron/recordatorios"
